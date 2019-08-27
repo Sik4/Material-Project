@@ -1,5 +1,17 @@
 <mat-tab-group>
-    <mat-tab label="New"></mat-tab>
-    <mat-tab label="Current"></mat-tab>
-    <mat-tab label="Outdated"></mat-tab>
+    <mat-tab label="New">
+        <ng-template matTabContent>
+            <p>News Here</p>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Current">
+        <ng-template matTabContent>
+            <p>Current Here</p>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Outdated">
+        <ng-template matTabContent>
+            <p>Outdated Here</p>
+        </ng-template>
+    </mat-tab>
 </mat-tab-group>
