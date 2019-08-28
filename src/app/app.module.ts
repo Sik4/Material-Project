@@ -5,14 +5,17 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    HttpClientModule,
+
     // Material
     BrowserAnimationsModule,
     MatButtonModule,
@@ -29,6 +33,8 @@ import { AppComponent } from './app.component';
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,20 +4,20 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'customers',
-    loadChildren:'./customers/customers.module#CustomersModule'
+    path: 'customers',
+    loadChildren: './customers/customers.module#CustomersModule'
   },
   {
-    path:'orders',
-    loadChildren:'./orders/orders.module#OrdersModule'
+    path: 'orders',
+    loadChildren: './orders/orders.module#OrdersModule'
   },
   {
-    path:'messages',
-    loadChildren:'./messages/messages.module#MessagesModule'
+    path: 'messages',
+    loadChildren: './messages/messages.module#MessagesModule'
   },
   {
-    path:'',
-    redirectTo:'',
+    path: '',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];
