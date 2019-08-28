@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material';
-import { RepDialogComponent } from '../rep-dialog/rep-dialog.component';
+
 
 
 @Component({
@@ -21,15 +21,5 @@ export class CustomerNewComponent implements OnInit {
     ]);
   }
 
-  openRepDialog() {
-    const dialogRef = this.dialog.open(RepDialogComponent, {
-      width: '250px',
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      alert('User chose ${result}');
-    });
-  }
 
 }
