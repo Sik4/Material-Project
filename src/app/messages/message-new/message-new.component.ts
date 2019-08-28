@@ -10,7 +10,7 @@ export class MessageNewComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   priorities: string[] = ['High', 'Medium', 'Low'];
-  departments: object[] = [
+  departments: Department[] = [
     {
       id: 1,
       name: 'Complaints'
@@ -37,8 +37,13 @@ export class MessageNewComponent implements OnInit {
       messageCtrl: ['', Validators.required]
     });
   }
-  getDepartmentName(department: object) {
-    return department ? department['name'] : undefined;
+  getDepartmentName(department: Department) {
+    return department ? department.name : undefined;
   }
 
+}
+
+interface Department {
+  id: number;
+  name: string;
 }
