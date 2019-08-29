@@ -1,23 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
+import myData from '../../../assets/data/products.json';
 
-const ELEMENT_DATA = [
-  {
-    orderDate: new Date(),
-    orderNumber: 100,
-    total: 29.99,
-    description: 'new Socks',
-    isChecked: false
-  },
-  {
-    orderDate: new Date(),
-    orderNumber: 101,
-    total: 50,
-    description: 'new Shoes',
-    isChecked: false
-  },
-];
+let ELEMENT_DATA = [];
+ELEMENT_DATA = myData;
+
 
 
 @Component({
@@ -36,13 +24,20 @@ export class OrderListComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
-  }
+}
 
   selectAll() {
     for (const elm of ELEMENT_DATA) {
       elm.isChecked = !elm.isChecked;
     }
   }
+
+  deleteData(deleteddata: object) {
+    const index: number = ELEMENT_DATA.indexOf(deleteddata);
+    if (index !== -1) {
+        ELEMENT_DATA.splice(index, 1);
+    }
+}
 
 
 
