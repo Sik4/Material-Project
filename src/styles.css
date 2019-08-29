@@ -3,3 +3,22 @@
 body {
     font-family: Roboto, Arial, sans-serif;
 }
+table {
+    width:100%;
+}
+
+th.mat-sort-header-sorted {
+    color:black;
+}
+tr.mat-footer-row {
+    font-weight: bold;
+}
+.mat-table-sticky {
+    border-top:1px solid #e0E0E0;
+}
+tr:hover{
+    background: #f5F5F5
+}
+tr:active{
+    background: #efefef
+}

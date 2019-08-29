@@ -14,6 +14,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatTableModule, MatSortModule, MatCheckboxModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [OrderListComponent, OrderNewComponent],
@@ -22,6 +26,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     OrdersRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     // Material
     MatTabsModule,
     MatButtonModule,
@@ -30,6 +35,9 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatIconModule,
     MatInputModule,
     MatMomentDateModule,
+    MatTableModule,
+    MatSortModule,
+    MatCheckboxModule,
   ]
 })
 export class OrdersModule { }

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Material-Project",
+      "public": "dist/Material-Project",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "material-project-3f5ae": {
+      "hosting": {
+        "Material-Project": [
+          "material-project-3f5ae"
+        ]
+      }
+    }
+  }
+}
