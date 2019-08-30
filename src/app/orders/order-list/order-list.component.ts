@@ -3,8 +3,6 @@ import { MatSort, MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 import myData from '../../../assets/data/products.json';
 
-let ELEMENT_DATA = [];
-ELEMENT_DATA = myData;
 
 
 
@@ -14,9 +12,10 @@ ELEMENT_DATA = myData;
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
+  dataTable = myData;
 
   displayedColumns: string[] = ['action', 'orderNumber', 'orderDate', 'description', 'total'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource = new MatTableDataSource(this.dataTable);
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
@@ -24,20 +23,19 @@ export class OrderListComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
-}
+  }
 
   selectAll() {
-    for (const elm of ELEMENT_DATA) {
+    for (const elm of this.dataTable) {
       elm.isChecked = !elm.isChecked;
     }
   }
 
   deleteData(deleteddata: object) {
-    const index: number = ELEMENT_DATA.indexOf(deleteddata);
-    if (index !== -1) {
-        ELEMENT_DATA.splice(index, 1);
-    }
-}
+    debugger
+    this.dataTable = this.dataSource.data.filter(ick => !ick.isChecked);
+    this.dataSource =  new MatTableDataSource(this.dataTable);
+  }
 
 
 

@@ -1,27 +1,35 @@
-# MaterialProject
+# Material Project EPSI Camille Maury
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
-## Development server
+- Que fait l'application, quelles sont ces fonctionalités principales ?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Application vitrine de différentes fonctionnalités d'Angular et de Material. 
+        - Menu flottant sur la droite
+        - Barre des tâches
+        - Module "orders" tableau triable, delete all possible par checked
+        - Module "orders/new" : exploration des différentes façon d'utiliser l'input de dates avec ou sans restrictions
+        - Module "customers/new" : Formulaire complet avec vérifications
+        - Module "customers/info" : utilisation de cartes
+        - Module "messages/new" : form wizzard utilisant un stepper
 
-## Code scaffolding
+- Quelles sont les languages/frameworks utilisés pour le front et pour le back ?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Langages utilisés : 
+Front : HTML/CSS/Angular/Material
+Back : json (en static)
 
-## Build
+- Comment lancer le front et le back ? 
+Clone le projet
+git checkout dev (branche de développement)
+git pull 
+npm install
+ng serve
+Aller sur Localhost:4200
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+OU : 
 
-## Running unit tests
+https://material-project-3f5ae.firebaseapp.com/customers/new
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Si vous avez fait des maquettes, utilisé un outil de gestion de tâche, indiquez le.
+https://github.com/Sik4/EPSI-Gradle 
+Avec les différents commits utilisés. 
